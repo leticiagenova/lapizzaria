@@ -3,10 +3,11 @@
 
         // adding stylesheets
 
-            wp_register_style('style', get_template_directory_uri() . '/css/style.css', array(), '1.0' ); //Uma forma segura de registar um arquivo CSS
+        wp_register_style('normalize', get_template_directory_uri() . '/css/normalize.css', array(), '6.0.0' );
+        wp_register_style('style', get_template_directory_uri() . '/css/style.css', array('normalize'), '1.0' ); //Uma forma segura de registar um arquivo CSS
 
         // Enqueue the style
-
+            wp_enqueue_style('normalize');
             wp_enqueue_style('style'); // Coloca na fila. Tem que ter o mesmo nome que o de cima
 
     }
