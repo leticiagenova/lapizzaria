@@ -8,7 +8,9 @@
 
     <body>
 
-        <nav>
-            <a href="/">About Us</a>
-            <a href="#">Contact Us</a>
-        </nav>
+    <header class="site-header">
+        <div class="logo">
+            <a href="<?php echo esc_url (home_url('/')) ?>"> <!-- Insere o link da home no logo esc_url() -->
+                <img src="<?php echo get_template_directory_uri() ?>/img/logo.svg" alt="Logo" class="logoimage">
+            </a>
+        </div>
